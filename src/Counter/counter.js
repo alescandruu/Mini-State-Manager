@@ -2,13 +2,13 @@ import React from 'react';
 import useStoreState from '../StateManagement/customHook';
 
 function Counter() {
-  const [ counter, setCounter ] = useStoreState(0);
-
+  const [ counter, setCounter ] = useStoreState(null);
+  console.log(counter);
   const increment = () => {
-    setCounter(counter + 1);
+    setCounter('increment');
   }
   const decrement = () => {
-    setCounter(counter - 1);
+    setCounter('decrement');
   }
 
   return (
