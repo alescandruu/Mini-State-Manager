@@ -18,9 +18,10 @@ button {
     align-items: center;
     color: black;
     border:2px solid black;
+    
 } 
 
 button:hover {
     cursor: pointer;
-    background-color: ;
+    background-color: rgb(174, 174, 174);
 }

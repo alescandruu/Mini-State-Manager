@@ -4,7 +4,7 @@ import "../Counter/Counter.css"
 
 function Counter() {
   const [ counter, setCounter ] = useStoreState(null);
-  console.log(counter);
+
   const increment = () => {
     setCounter('increment');
   }

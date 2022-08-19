@@ -2,7 +2,6 @@ export const pubsub = {
    events: {},
 
    publish: function (event, data) {
-      // console.log(data);
       this.events[event].forEach((action) => {
          action(data);
       });
