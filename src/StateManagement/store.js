@@ -1,9 +1,9 @@
-import { pubsub } from "./pubsub";
+import { MessageService } from "./MessageService";
 import { CHANGED_STATE } from "../configFolder/configPubSub";
 
 export default function Store() {
    let state = {
-      counter: 0,
+      counter: 3,
    };
 
    const updateStore = (operation) => {
@@ -14,7 +14,7 @@ export default function Store() {
          state = {...state};
          state.counter--;
       }
-      pubsub.publish(CHANGED_STATE, state.counter); // publishing a new global state change 
+      MessageService.publish(CHANGED_STATE, state.counter); // publishing a new global state change 
    };
 
    const getStateValue = () => {
